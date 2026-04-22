@@ -44,8 +44,8 @@
 // │    A     │    R     │    S     │    T     │    G     │    │    M     │    N     │    E     │    I     │    O     │
     HRML(A,        R,         S,         T)     &kp G           &kp M      HRMR(N,        E,         I,         O)
 // ├──────────┼──────────┼──────────┼──────────┼──────────┤    ├──────────┼──────────┼──────────┼──────────┼──────────┤
-// │    Z     │    X     │    C     │    D     │    V     │    │    K     │    H     │    ,     │    .     │    /     │
-    &kp Z      &kp X      &kp C      &kp D      &kp V           &kp K      &kp H      &kp COMMA  &kp DOT    &kp SLASH
+// │    Z     │    X     │    C     │    D     │    V     │    │    K     │    H     │    ,     │    .     │    '     │
+    &kp Z      &kp X      &kp C      &kp D      &kp V           &kp K      &kp H      &kp COMMA  &kp DOT    &kp SQT
 // ╰──────────┴──────────┴──────────┼──────────┼──────────┤    ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                    &lt 3 TAB   &sk LSHFT       &lt 1 SPACE &lt 2 ENTER
             >;
@@ -56,10 +56,10 @@
             bindings = <
 // ╭──────────┬──────────┬──────────┬──────────┬──────────╮    ╭──────────┬──────────┬──────────┬──────────┬──────────╮
 // │    !     │    @     │    #     │    $     │    %     │    │    ^     │    &     │    * │    (     │    )     │
-    &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT       &kp CARET  &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR
+    &kp EXCL   &kp AT      &kp HASH   &kp DLLR   &kp PRCNT       &kp CARET  &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR
 // ├──────────┼──────────┼──────────┼──────────┼──────────┤    ├──────────┼──────────┼──────────┼──────────┼──────────┤
-// │    -     │    =     │    {     │    [     │    (     │    │    )     │    ]     │    }     │    \     │    '     │
-    &kp MINUS  &kp EQUAL  &kp LBRC   &kp LBKT   &kp LPAR        &kp RPAR   &kp RBKT   &kp RBRC   &kp BSLH   &kp SQT
+// │    -     │    =     │    {     │    [     │    (     │    │    )     │    ]     │    }     │    \     │    /     │
+    &kp MINUS  &kp EQUAL  &kp LBRC   &kp LBKT   &kp LPAR        &kp RPAR   &kp RBKT   &kp RBRC   &kp BSLH   &kp SLASH
 // ├──────────┼──────────┼──────────┼──────────┼──────────┤    ├──────────┼──────────┼──────────┼──────────┼──────────┤
 // │    _     │    +     │    ~     │    `     │    |     │    │    ;     │    :     │    <     │    >     │    ?     │
     &kp UNDER  &kp PLUS   &kp TILDE  &kp GRAVE  &kp PIPE        &kp SEMI   &kp COLON  &kp LT     &kp GT     &kp QMARK
