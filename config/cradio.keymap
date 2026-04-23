@@ -103,19 +103,20 @@
         };
 
         /* LAYER 4: ADJUST (BT & SYSTEM) */
-        adjust_layer {
-            bindings = <
-// ╭──────────┬──────────┬──────────┬──────────┬──────────╮    ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-// │   BOOT   │          │          │          │          │    │          │          │          │          │   BOOT   │
-    &bootloader &trans    &trans     &trans     &trans          &trans     &trans     &trans     &trans     &bootloader
-// ├──────────┼──────────┼──────────┼──────────┼──────────┤    ├──────────┼──────────┼──────────┼──────────┼──────────┤
-// │   RESET  │          │          │          │          │    │   BT 0   │   BT 1   │   BT 2   │   BT 3   │  BT CLR  │
-    &sys_reset  &trans    &trans     &trans     &trans          &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR
-// ├──────────┼──────────┼──────────┼──────────┼──────────┤    ├──────────┼──────────┼──────────┼──────────┼──────────┤
-// │          │          │          │          │          │    │          │          │          │          │ BT CLR ALL
-    &trans      &trans    &trans     &trans     &trans          &trans     &trans     &trans     &trans     &bt BT_CLR_ALL
-// ╰──────────┴──────────┴──────────┼──────────┼──────────┤    ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                   &trans     &trans          &trans     &trans
+    adjust {
+        bindings = <
+    //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+    //│  F1      │  F2      │  F3      │  F4      │  F5      │   │  F6      │  F7      │  F8      │  F9      │  F10     │
+        &kp F1     &kp F2     &kp F3     &kp F4     &kp F5         &kp F6     &kp F7     &kp F8     &kp F9     &kp F10
+    //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+    //│BOOTLOADER│          │          │          │          │   │          │PROFILE 0 │PROFILE 1 │PROFILE 2 │BOOTLOADER│
+      &bootloader   &trans     &trans     &trans     &trans        &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bootloader
+    //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+    //│ RESET    │          │          │          │          │   │          │  CLEAR   │          │CLEAR ALL │  RESET   │
+       &sys_reset   &trans     &trans     &trans     &trans         &trans   &bt BT_CLR   &trans &bt BT_CLR_ALL &sys_reset
+    //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                          &trans     &trans         &trans     &trans
+    //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
     };
