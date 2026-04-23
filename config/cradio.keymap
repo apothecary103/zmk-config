@@ -79,9 +79,9 @@
     &kp LGUI   &kp LALT   &kp LSHFT  &kp LCTRL  &trans          &kp PG_UP  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
 // ├──────────┼──────────┼──────────┼──────────┼──────────┤    ├──────────┼──────────┼──────────┼──────────┼──────────┤
 // │          │          │          │          │          │    │   PGDN   │   HOME   │          │   END    │   DEL    │
-    &trans     &trans     &trans     &trans     &trans          &kp PG_DN  &kp HOME   &trans     &kp END    &kp DEL
+    &trans     &kp ESC     &trans     &trans     &trans          &kp PG_DN  &kp HOME   &trans     &kp END    &kp DEL
 // ╰──────────┴──────────┴──────────┼──────────┼──────────┤    ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                   &trans     &trans          &trans     &trans
+                                   &trans     &trans          &kp ESC     &trans
             >;
         };
 
